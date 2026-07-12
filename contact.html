@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#1f7a4d">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Contact & Free Quote | EnamelCraft</title>
+<meta name="description" content="Request a free enamel pin quote. Send your idea and get a design proof within 24 hours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'><circle cx='24' cy='24' r='21' fill='%231f7a4d'/><path d='M16 30 L24 14 L32 30 Z' fill='%23c9a227'/></svg>">
+</head>
+<body>
+<header class="site" id="top">
+  <div class="wrap nav">
+    <a class="brand" href="index.html"><img src="images/logo.png" alt="EnamelCraft logo" class="logo"><span>Enamel<b>Craft</b></span></a>
+    <nav class="nav-links" aria-label="Primary"><a href="index.html" class="">Home</a><a href="custom-enamel-pins.html" class="">Custom Pins</a><a href="how-it-works.html" class="">How It Works</a><a href="pricing.html" class="">Pricing</a><a href="gallery.html" class="">Gallery</a><a href="about.html" class="">About</a><a href="faq.html" class="">FAQ</a><a href="contact.html" class="active">Contact</a></nav>
+    <div class="nav-actions">
+      <a class="btn btn-primary" href="contact.html">Get a Free Quote <span class="arr">&rarr;</span></a>
+      <button class="hamburger" aria-label="Menu" onclick="document.getElementById('m').classList.toggle('open')"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="m">
+    <a href="index.html" class="">Home</a><a href="custom-enamel-pins.html" class="">Custom Pins</a><a href="how-it-works.html" class="">How It Works</a><a href="pricing.html" class="">Pricing</a><a href="gallery.html" class="">Gallery</a><a href="about.html" class="">About</a><a href="faq.html" class="">FAQ</a><a href="contact.html" class="active">Contact</a>
+    <a class="btn btn-primary" href="contact.html" style="margin-top:8px">Get a Free Quote &rarr;</a>
+  </div>
+</header>
+<main>
+
+<section class="hero" style="background:linear-gradient(180deg,#f3faf6,#ffffff)">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Contact</span>
+      <h1>Get a <span class="hl">free quote</span></h1>
+      <p class="sub">Tell us about your project &mdash; attach a file if you have one. We'll reply with a design proof and quote within 24 hours. No obligation, ever.</p>
+    </div>
+    <div class="hero-art"><div class="hero-badge" style="top:14px;right:12%"><svg viewBox="0 0 200 200" width="160" height="160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="enamel pin">
+  <defs>
+    <radialGradient id="g3623" cx="38%" cy="32%" r="75%">
+      <stop offset="0%" stop-color="#5fbf8a"/><stop offset="100%" stop-color="#1f7a4d"/>
+    </radialGradient>
+  </defs>
+  <circle cx="100" cy="100" r="78" fill="url(#g3623)" stroke="#0c1511" stroke-width="4"/>
+  <circle cx="100" cy="100" r="78" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="3" stroke-dasharray="2 7"/>
+  <path d="M62 66 Q100 40 138 66" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="100" cy="100" r="40" fill="rgba(255,255,255,.14)"/>
+</svg></div><div class="hero-badge" style="bottom:10px;left:10%"><svg viewBox="0 0 200 200" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="enamel pin">
+  <defs>
+    <radialGradient id="g731" cx="38%" cy="32%" r="75%">
+      <stop offset="0%" stop-color="#f0d580"/><stop offset="100%" stop-color="#c9a227"/>
+    </radialGradient>
+  </defs>
+  <circle cx="100" cy="100" r="78" fill="url(#g731)" stroke="#0c1511" stroke-width="4"/>
+  <circle cx="100" cy="100" r="78" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="3" stroke-dasharray="2 7"/>
+  <path d="M62 66 Q100 40 138 66" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="100" cy="100" r="40" fill="rgba(255,255,255,.14)"/>
+</svg></div></div>
+  </div>
+</section>
+
+<section class="section"><div class="wrap">
+  <div class="contact-grid">
+    <div>
+      <div class="form-ok" id="formOk">Thanks! Your request has been noted. (This is a demo form &mdash; wire it to your email/CRM to receive submissions.)</div>
+      <form id="quoteForm" class="card" style="box-shadow:var(--shadow)">
+        <div class="field"><label for="n">Name *</label><input id="n" required placeholder="Your name"></div>
+        <div class="field"><label for="e">Email *</label><input id="e" type="email" required placeholder="you@company.com"></div>
+        <div class="field"><label for="c">Company / Project</label><input id="c" placeholder="Optional"></div>
+        <div class="grid grid-2">
+          <div class="field"><label for="q">Quantity</label><input id="q" placeholder="e.g. 200"></div>
+          <div class="field"><label for="s">Size</label><select id="s"><option>Not sure yet</option><option>13&ndash;16 mm</option><option>19&ndash;22 mm</option><option>25&ndash;32 mm</option><option>38 mm+</option></select></div>
+        </div>
+        <div class="field"><label for="m">Tell us about your pin *</label><textarea id="m" required placeholder="Style, colours, deadline, attachments..."></textarea></div>
+        <button class="btn btn-primary" type="submit">Send my request <span class="arr">&rarr;</span></button>
+        <p class="note">Tip: you can also email <a href="mailto:hello@enamelcraft.example">hello@enamelcraft.example</a> with your artwork attached.</p>
+      </form>
+    </div>
+    <div>
+      <div class="info-card">
+        <h3>Reach us directly</h3>
+        <div class="row"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="10" width="40" height="28" rx="4" fill="none" stroke="currentColor" stroke-width="3"/><path d="M6 12 L24 26 L42 12" fill="none" stroke="currentColor" stroke-width="3"/></svg><div>hello@enamelcraft.example<br>We reply within 24 hours, Mon&ndash;Fri.</div></div>
+        <div class="row"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 6 C10 6 8 8 9 12 C11 20 20 29 28 31 C32 32 34 30 34 28 L30 24 C29 23 27 23 26 24 L22 28 C18 25 15 22 12 18 L16 14 C17 13 17 11 16 10 Z" fill="currentColor"/></svg><div>+00 (0) 000 000 0000<br>Studio hours 9:00&ndash;18:00 GMT</div></div>
+        <div class="row"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M24 4 C15 4 8 11 8 20 C8 32 24 44 24 44 C24 44 40 32 40 20 C40 11 33 4 24 4 Z" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="24" cy="19" r="7" fill="currentColor"/></svg><div>EnamelCraft Studio<br>Placeholder address, City, Country</div></div>
+        <div class="row"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="18" fill="none" stroke="currentColor" stroke-width="3"/><path d="M6 24 H42 M24 6 C32 14 32 34 24 42 C16 34 16 14 24 6" fill="none" stroke="currentColor" stroke-width="3"/></svg><div>Worldwide shipping<br>Tracked &amp; insured</div></div>
+      </div>
+      <div class="card mt-s" style="background:var(--green-50);border-color:#cfe3d6">
+        <h3 style="font-size:17px">What happens next?</h3>
+        <p style="color:var(--ink);font-size:14px;margin-top:6px">1) We review your brief &middot; 2) Send a free digital proof &middot; 3) You approve &middot; 4) We produce &amp; ship.</p>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+</main>
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="index.html" style="color:#fff"><img src="images/logo.png" alt="EnamelCraft logo" class="logo"><span style="color:#fff">Enamel<b style="color:#7fe0a8">Craft</b></span></a>
+        <p>Custom enamel pins, badges &amp; brooches manufactured to your design. Low minimums, free artwork, worldwide delivery.</p>
+        <div class="foot-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M24 4 C15 4 8 11 8 20 C8 32 24 44 24 44 C24 44 40 32 40 20 C40 11 33 4 24 4 Z" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="24" cy="19" r="7" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M24 6 L29 21 L45 22 L32 32 L37 47 L24 38 L11 47 L16 32 L3 22 L19 21 Z" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="X"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M26 4 L10 28 H22 L18 44 L36 18 H24 Z" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+      <div><h4>Products</h4>
+        <a href="custom-enamel-pins.html">Hard Enamel Pins</a>
+        <a href="custom-enamel-pins.html">Soft Enamel Pins</a>
+        <a href="custom-enamel-pins.html">Lapel Pins &amp; Brooches</a>
+        <a href="custom-enamel-pins.html">Custom Badges</a>
+      </div>
+      <div><h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="gallery.html">Our Work</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div><h4>Support</h4>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <a href="mailto:hello@enamelcraft.example">hello@enamelcraft.example</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="yr"></span> EnamelCraft. All rights reserved.</span>
+      <span>Crafted with care &middot; Placeholder brand &mdash; rename freely</span>
+    </div>
+  </div>
+</footer>
+<script src="js/site.js"></script>
+</body>
+</html>
