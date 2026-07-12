@@ -67,14 +67,14 @@
     <div>
       <div class="form-ok" id="formOk">Thanks! We've received your request and will reply with a quote within 24 hours.</div>
       <form id="quoteForm" class="card" style="box-shadow:var(--shadow)" action="https://formspree.io/f/FORM_ID" method="POST">
-        <div class="field"><label for="n">Name *</label><input id="n" required placeholder="Your name"></div>
-        <div class="field"><label for="e">Email *</label><input id="e" type="email" required placeholder="you@company.com"></div>
-        <div class="field"><label for="c">Company / Project</label><input id="c" placeholder="Optional"></div>
+        <div class="field"><label for="n">Name *</label><input id="n" name="name" required placeholder="Your name"></div>
+        <div class="field"><label for="e">Email *</label><input id="e" name="email" type="email" required placeholder="you@company.com"></div>
+        <div class="field"><label for="c">Company / Project</label><input id="c" name="company" placeholder="Optional"></div>
         <div class="grid grid-2">
-          <div class="field"><label for="q">Quantity</label><input id="q" placeholder="e.g. 200"></div>
-          <div class="field"><label for="s">Size</label><select id="s"><option>Not sure yet</option><option>13&ndash;16 mm</option><option>19&ndash;22 mm</option><option>25&ndash;32 mm</option><option>38 mm+</option></select></div>
+          <div class="field"><label for="q">Quantity</label><input id="q" name="quantity" placeholder="e.g. 200"></div>
+          <div class="field"><label for="s">Size</label><select id="s" name="size"><option>Not sure yet</option><option>13&ndash;16 mm</option><option>19&ndash;22 mm</option><option>25&ndash;32 mm</option><option>38 mm+</option></select></div>
         </div>
-        <div class="field"><label for="m">Tell us about your pin *</label><textarea id="m" required placeholder="Style, colours, deadline, attachments..."></textarea></div>
+        <div class="field"><label for="m">Tell us about your pin *</label><textarea id="m" name="message" required placeholder="Style, colours, deadline, attachments..."></textarea></div>
         <button class="btn btn-primary" type="submit">Send my request <span class="arr">&rarr;</span></button>
         <p class="note">Tip: you can also email <a href="mailto:ycr13120902436@gmail.com">ycr13120902436@gmail.com</a> with your artwork attached.</p>
       </form>
