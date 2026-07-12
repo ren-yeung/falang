@@ -216,6 +216,9 @@ a,button,input,textarea,select,label{-webkit-tap-highlight-color:transparent}
   /* keep content clear of the fixed bottom bar + iPhone home indicator */
   body{padding-bottom:74px}
   header.site{padding-top:env(safe-area-inset-top,0)}
+  /* section horizontal breathing room — fix text hugging edges */
+  .section{padding:56px 20px}
+  .wrap{padding:0 4px}  /* wrap sits inside .section which already has 20px */
   /* persistent conversion bar (signature H5 pattern) */
   .mobile-cta{position:fixed;left:0;right:0;bottom:0;z-index:60;
     display:flex;align-items:center;justify-content:center;gap:9px;
