@@ -1,7 +1,7 @@
 // Cloudflare Pages Function — handles the quote form submission.
-// Flow: browser -> /api/contact (same origin, no CORS)
-//       -> ① forward to Formspree (form-urlencoded, proper format)  -> keeps backend record
-//       -> ② send email via Resend (owner notification)              -> instant alert
+// Browser -> /api/contact (same origin, no CORS)
+//   -> ① forward to Formspree (best-effort, real IP passed via X-Forwarded-For)
+//   -> ② send email via Resend (PRIMARY owner notification)
 export async function onRequestPost(context) {
   const { request, env } = context;
 
@@ -13,7 +13,6 @@ export async function onRequestPost(context) {
     return Response.json({ ok: false, error: "bad request" }, { status: 400 });
   }
 
-  // Build email body for owner notification
   const fields = [
     ["name", "Name"],
     ["email", "Email"],
@@ -24,36 +23,36 @@ export async function onRequestPost(context) {
   ];
   const text =
     fields.map(([k, label]) => `${label}: ${data[k] || "-"}`).join("\n") +
-    `\n\nReceived from: ${request.headers.get("cf-connecting-ip") || "unknown"}` +
+    `\n\nVisitor IP: ${request.headers.get("cf-connecting-ip") || "unknown"}` +
     `\nTime (UTC): ${new Date().toISOString()}`;
   const subject = `New quote request from ${data.name || "website visitor"}`;
 
-  // ── 1) Forward to Formspree using form-urlencoded (their expected format) ──
-  // Include honeypot field so Formspree doesn't flag as spam.
+  const ip = request.headers.get("cf-connecting-ip") || "";
+
+  // ── 1) Forward to Formspree (form-urlencoded + honeypot + real IP) ──
   let formspreeOk = false;
   try {
     const body = new URLSearchParams();
-    for (const [key, val] of Object.entries(data)) {
-      if (val) body.append(key, val);
-    }
-    body.append("_gotcha", ""); // honeypot: leave empty = real human
-
+    for (const [k, v] of Object.entries(data)) if (v) body.append(k, v);
+    body.append("_gotcha", "");
     const r = await fetch("https://formspree.io/f/xykrgawj", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
         Accept: "application/json",
+        "X-Forwarded-For": ip,
       },
       body: body.toString(),
     });
     formspreeOk = r.ok;
-  } catch (e) {
-    formspreeOk = false;
-  }
+  } catch (e) {}
 
-  // ── 2) Email notification via Resend (free tier: 3000 emails/month) ──
+  // ── 2) Email via Resend (the thing you actually need) ──
   let emailOk = false;
-  if (env.RESEND_API_KEY) {
+  let emailErr = null;
+  if (!env.RESEND_API_KEY) {
+    emailErr = "RESEND_API_KEY not configured";
+  } else {
     try {
       const r = await fetch("https://api.resend.com/emails", {
         method: "POST",
@@ -70,19 +69,22 @@ export async function onRequestPost(context) {
         }),
       });
       emailOk = r.ok;
+      if (!r.ok) {
+        emailErr = await r.text();
+        console.error("Resend error:", r.status, emailErr);
+      }
     } catch (e) {
-      emailOk = false;
+      emailErr = e.message;
+      console.error("Resend fetch failed:", e.message);
     }
   }
 
-  // If Formspree succeeded, tell client it's all good.
-  if (formspreeOk) {
-    return Response.json({ ok: true, emailSent: emailOk });
+  // Primary success = email delivered. If Resend fails, surface the reason (debug).
+  if (emailOk) {
+    return Response.json({ ok: true, emailSent: true, formspreeOk });
   }
-
-  // Even if Formspree failed, email might have worked.
   return Response.json(
-    { ok: !!emailOk, emailSent: emailOk },
-    { status: emailOk ? 200 : 502 },
+    { ok: false, emailSent: false, formspreeOk, error: emailErr },
+    { status: 502 },
   );
 }
