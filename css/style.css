@@ -239,5 +239,29 @@ a,button,input,textarea,select,label{-webkit-tap-highlight-color:transparent}
   .step,.review,.stat{padding:24px}
   .info-card{padding:28px}
   .cta-band{padding:38px 22px}
-  .foot-bottom{justify-content:center;text-align:center}
+  .foot-bottom{justify-content:center;text-align:center;flex-direction:column;align-items:center;gap:6px}
+
+  /* ===== H5 Footer Redesign ===== */
+  footer.site{padding:48px 22px 28px}
+  .foot-grid{gap:0}
+  /* each column becomes a section with visual separation */
+  .foot-grid>div{padding:24px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+  .foot-grid>div:first-child{padding-top:4px}
+  .foot-grid>div:last-child{border-bottom:none;padding-bottom:8px}
+  /* brand section — logo + desc + social */
+  .foot-brand{display:flex;flex-direction:column;gap:12px}
+  .foot-brand p{font-size:13.5px;line-height:1.65;margin-top:0;max-width:100%}
+  .foot-social{margin-top:4px}
+  /* section headings — slightly bolder, tighter */
+  footer.site h4{font-size:14px;margin-bottom:12px;font-weight:600;
+    display:flex;align-items:center;gap:10px}
+  footer.site h4::after{content:'';flex:1;height:1px;background:rgba(255,255,255,.09)}
+  /* links — compact, touch-friendly min-height */
+  footer.site a{font-size:13.5px;padding:7px 0;display:flex;align-items:center;gap:8px}
+  footer.site a.foot-wa{font-size:12px;padding:3px 0 7px}
+  /* support section — contact info in a subtle card */
+  .foot-grid>div:last-child a:not(.foot-wa){
+    padding:9px 12px;border-radius:8px;background:rgba(255,255,255,.04);
+    margin-bottom:4px;font-size:13px}
+  .foot-grid>div:last-child a.foot-wa{padding-left:12px}
 }
