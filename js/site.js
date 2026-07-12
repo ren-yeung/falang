@@ -36,14 +36,33 @@ document.addEventListener('DOMContentLoaded',function(){
       });
     });
   });
-  // contact form (no backend) -> friendly confirmation
+  // contact form -> Formspree (email + dashboard), with inline success
   var form=document.getElementById('quoteForm');
   if(form){
+    // TODO: 把 FORM_ID 替换为你的 Formspree 表单 ID（在 formspree.io 创建表单后获得）
+    var FORMSPREE_ENDPOINT='https://formspree.io/f/FORM_ID';
     form.addEventListener('submit',function(e){
       e.preventDefault();
-      document.getElementById('formOk').style.display='block';
-      form.reset();
-      document.getElementById('formOk').scrollIntoView({behavior:'smooth',block:'center'});
+      var btn=form.querySelector('button[type=submit]');
+      var orig=btn.innerHTML;
+      btn.disabled=true; btn.innerHTML='Sending…';
+      fetch(FORMSPREE_ENDPOINT,{
+        method:'POST',
+        body:new FormData(form),
+        headers:{'Accept':'application/json'}
+      }).then(function(r){
+        if(r.ok){
+          document.getElementById('formOk').style.display='block';
+          form.reset();
+          document.getElementById('formOk').scrollIntoView({behavior:'smooth',block:'center'});
+        }else{
+          alert('Sorry, something went wrong. Please email us directly.');
+        }
+      }).catch(function(){
+        alert('Network error. Please email us directly.');
+      }).finally(function(){
+        btn.disabled=false; btn.innerHTML=orig;
+      });
     });
   }
 });
