@@ -39,8 +39,8 @@ document.addEventListener('DOMContentLoaded',function(){
   // contact form -> Formspree (email + dashboard), with inline success
   var form=document.getElementById('quoteForm');
   if(form){
-    // TODO: 把 FORM_ID 替换为你的 Formspree 表单 ID（在 formspree.io 创建表单后获得）
-    var FORMSPREE_ENDPOINT='https://formspree.io/f/FORM_ID';
+    // 提交地址取自定义单的 action 属性（在 contact.html 改 FORM_ID 即可，不必动本文件）
+    var FORMSPREE_ENDPOINT=form.getAttribute('action');
     form.addEventListener('submit',function(e){
       e.preventDefault();
       var btn=form.querySelector('button[type=submit]');
