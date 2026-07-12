@@ -178,6 +178,7 @@ footer.site{background:var(--ink);color:#cdd8d2;padding:58px 0 26px;margin-top:3
 footer.site h4{color:#fff;font-size:15px;margin-bottom:16px;font-family:'Poppins',sans-serif}
 footer.site a{color:#cdd8d2;display:block;padding:5px 0;font-size:14px;transition:.16s}
 footer.site a:hover{color:#fff}
+footer.site a.foot-wa{font-size:12.5px;opacity:.82;color:#9fe6c0;padding-top:2px}
 .foot-brand p{font-size:14px;color:#9fb0a8;margin-top:14px;max-width:300px}
 .foot-social{display:flex;gap:11px;margin-top:18px}
 .foot-social a{width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;
