@@ -1,6 +1,7 @@
 // Cloudflare Pages Function — handles the quote form submission.
-// Flow: parse form -> forward to Formspree (keeps backend record + future CRM webhook)
-//       -> send email notification to owner via Resend (free tier).
+// Flow: browser -> /api/contact (same origin, no CORS)
+//       -> ① forward to Formspree (form-urlencoded, proper format)  -> keeps backend record
+//       -> ② send email via Resend (owner notification)              -> instant alert
 export async function onRequestPost(context) {
   const { request, env } = context;
 
@@ -12,6 +13,7 @@ export async function onRequestPost(context) {
     return Response.json({ ok: false, error: "bad request" }, { status: 400 });
   }
 
+  // Build email body for owner notification
   const fields = [
     ["name", "Name"],
     ["email", "Email"],
@@ -22,23 +24,34 @@ export async function onRequestPost(context) {
   ];
   const text =
     fields.map(([k, label]) => `${label}: ${data[k] || "-"}`).join("\n") +
-    `\n\nReceived: ${new Date().toISOString()}`;
+    `\n\nReceived from: ${request.headers.get("cf-connecting-ip") || "unknown"}` +
+    `\nTime (UTC): ${new Date().toISOString()}`;
   const subject = `New quote request from ${data.name || "website visitor"}`;
 
-  // 1) Forward to Formspree (server side, no CORS issue) — keeps backend + CRM webhook path.
+  // ── 1) Forward to Formspree using form-urlencoded (their expected format) ──
+  // Include honeypot field so Formspree doesn't flag as spam.
   let formspreeOk = false;
   try {
+    const body = new URLSearchParams();
+    for (const [key, val] of Object.entries(data)) {
+      if (val) body.append(key, val);
+    }
+    body.append("_gotcha", ""); // honeypot: leave empty = real human
+
     const r = await fetch("https://formspree.io/f/xykrgawj", {
       method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        Accept: "application/json",
+      },
+      body: body.toString(),
     });
     formspreeOk = r.ok;
   } catch (e) {
     formspreeOk = false;
   }
 
-  // 2) Email notification via Resend (free plan, 3000/mo). Set RESEND_API_KEY in Pages env.
+  // ── 2) Email notification via Resend (free tier: 3000 emails/month) ──
   let emailOk = false;
   if (env.RESEND_API_KEY) {
     try {
@@ -53,7 +66,7 @@ export async function onRequestPost(context) {
           to: ["ycr13120902436@gmail.com"],
           subject,
           text,
-          reply_to: data.email || undefined,
+          replyTo: data.email || undefined,
         }),
       });
       emailOk = r.ok;
@@ -62,9 +75,14 @@ export async function onRequestPost(context) {
     }
   }
 
-  // Data captured is the priority. Email is best-effort.
+  // If Formspree succeeded, tell client it's all good.
   if (formspreeOk) {
     return Response.json({ ok: true, emailSent: emailOk });
   }
-  return Response.json({ ok: false }, { status: 502 });
+
+  // Even if Formspree failed, email might have worked.
+  return Response.json(
+    { ok: !!emailOk, emailSent: emailOk },
+    { status: emailOk ? 200 : 502 },
+  );
 }
