@@ -74,8 +74,7 @@ export async function onRequestPost(context) {
         contact: data.name || "",
         email: data.email || "",
         phone: data.phone || "",
-        // CRM has no dedicated WhatsApp field; store it in the IM (wechat) field.
-        wechat: data.whatsapp || "",
+        whatsapp: data.whatsapp || "",
         country: data.country || "",
         source: "官网表单",
         sourceType: "inbound",
