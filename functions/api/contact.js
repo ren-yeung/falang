@@ -91,7 +91,7 @@ export async function onRequestPost(context) {
         const r = await fetch("https://baojia.kuajing.space/api/leads/ingest", {
           method: "POST",
           headers: {
-            "Content-Type": "application/json",
+            "Content-Type": "application/json; charset=utf-8",
             "X-Lead-Secret": env.LEAD_SECRET,
           },
           body: JSON.stringify(payload),
