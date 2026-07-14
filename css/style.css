@@ -69,6 +69,7 @@ header.site.scrolled{box-shadow:var(--shadow-sm);border-color:var(--border)}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
 .hero-art{position:relative;min-height:380px}
 .hero-badge{position:absolute;filter:drop-shadow(0 14px 26px rgba(20,53,40,.18))}
+.hero-badge .pin{display:block;width:100%;height:auto;border-radius:50%;background:#fff;border:4px solid #0c1511;box-shadow:inset 0 0 0 3px rgba(255,255,255,.92),0 2px 8px rgba(20,53,40,.14);object-fit:contain}
 .trustbar{border-top:1px solid var(--border);background:#fff}
 .trustbar .wrap{display:flex;flex-wrap:wrap;gap:14px 40px;justify-content:center;padding:22px 22px}
 .trustbar .item{display:flex;align-items:center;gap:10px;font-family:'Poppins',sans-serif;font-weight:600;color:var(--ink);font-size:15px}
@@ -256,7 +257,7 @@ a,button,input,textarea,select,label{-webkit-tap-highlight-color:transparent}
   .hero-cta .btn-ghost{border-width:1.5px}
   /* art area — compact, doesn't dominate */
   .hero-art{min-height:180px;order:0}
-  .hero-badge svg{max-width:44vw;height:auto}
+  .hero-badge img{max-width:44vw;height:auto}
   /* trustbar → clean 2×2 card grid */
   .trustbar{border-top:none;background:linear-gradient(180deg,#fff,#f7faf8);
     padding:8px 0 20px}
