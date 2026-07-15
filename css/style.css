@@ -74,6 +74,8 @@ header.site.scrolled{box-shadow:var(--shadow-sm);border-color:var(--border)}
 .hiw-pair{display:flex;align-items:flex-start;justify-content:center;gap:24px;max-width:520px;width:100%;padding:10px}
 .hiw-pair img{width:52%;height:auto;object-fit:contain;filter:drop-shadow(0 14px 26px rgba(20,53,40,.18))}
 .hiw-pair img:last-child{margin-top:70px}
+.gal-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 18px;max-width:420px;width:100%;padding:10px}
+.gal-hero-grid img{width:100%;height:auto;object-fit:contain;filter:drop-shadow(0 12px 24px rgba(20,53,40,.16))}
 .hero-badge{position:absolute;filter:drop-shadow(0 14px 26px rgba(20,53,40,.18))}
 .hero-badge .pin{display:block;width:100%;height:auto;filter:drop-shadow(0 14px 26px rgba(20,53,40,.22))}
 .trustbar{border-top:1px solid var(--border);background:#fff}
