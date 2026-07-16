@@ -45,9 +45,10 @@ header.site.scrolled{box-shadow:var(--shadow-sm);border-color:var(--border)}
 .brand{display:flex;align-items:center;gap:11px;font-family:'Poppins',sans-serif;font-weight:700;font-size:20px;color:var(--ink)}
 .brand .logo{width:40px;height:40px;flex:none;object-fit:contain;border-radius:6px}
 .brand b{color:var(--green)}
-.nav-links{display:flex;align-items:center;gap:6px}
+.nav-links{display:flex;align-items:center;gap:6px;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
 .nav-links a{font-family:'Poppins',sans-serif;font-weight:500;font-size:15px;color:var(--ink);
-  padding:9px 13px;border-radius:9px;transition:.18s}
+  padding:9px 13px;border-radius:9px;transition:.18s;white-space:nowrap;flex-shrink:0}
+.nav-links::-webkit-scrollbar{display:none}
 .nav-links a:hover{color:var(--green);background:var(--green-50)}
 .nav-links a.active{color:var(--green)}
 .nav-actions{display:flex;align-items:center;gap:12px}

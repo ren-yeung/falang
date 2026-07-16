@@ -17,13 +17,13 @@
 
   var DICT = {
     'nav.home':    { en: 'Home',               zh: '首页',       es: 'Inicio',            fr: 'Accueil',         de: 'Start' },
-    'nav.custom':  { en: 'Custom Pins',        zh: '定制徽章',    es: 'Pins Personalizados', fr: 'Épingles Personnalisées', de: 'Personalisierte Pins' },
-    'nav.how':     { en: 'How It Works',       zh: '制作流程',    es: 'Cómo Funciona',     fr: 'Comment ça Marche', de: 'So funktioniert’s' },
-    'nav.pricing': { en: 'Pricing',            zh: '价格',       es: 'Precios',           fr: 'Tarifs',           de: 'Preise' },
-    'nav.gallery': { en: 'Gallery',            zh: '案例展示',    es: 'Galería',           fr: 'Galerie',          de: 'Galerie' },
-    'nav.about':   { en: 'About',              zh: '关于我们',    es: 'Nosotros',          fr: 'À propos',         de: 'Über uns' },
-    'nav.faq':     { en: 'FAQ',                zh: '常见问题',    es: 'Preguntas Frecuentes', fr: 'FAQ',            de: 'FAQ' },
-    'nav.contact': { en: 'Contact',            zh: '联系我们',    es: 'Contacto',          fr: 'Contact',          de: 'Kontakt' },
+    'nav.custom':  { en: 'Custom Pins',        zh: '定制徽章',    es: 'Pines a Medida',     fr: 'Pins Sur Mesure', de: 'Indiv. Pins' },
+    'nav.how':     { en: 'How It Works',       zh: '制作流程',    es: 'Cómo Funciona',      fr: 'Notre Processus',de: 'Ablauf' },
+    'nav.pricing': { en: 'Pricing',            zh: '价格',       es: 'Precios',           fr: 'Tarifs',          de: 'Preise' },
+    'nav.gallery': { en: 'Gallery',            zh: '案例展示',    es: 'Galería',           fr: 'Galerie',         de: 'Galerie' },
+    'nav.about':   { en: 'About',              zh: '关于我们',    es: 'Nosotros',          fr: 'À propos',        de: 'Über uns' },
+    'nav.faq':     { en: 'FAQ',                zh: '常见问题',    es: 'FAQ',               fr: 'FAQ',             de: 'FAQ' },
+    'nav.contact': { en: 'Contact',            zh: '联系我们',    es: 'Contacto',          fr: 'Contact',         de: 'Kontakt' },
     'cta.quote':   { en: 'Get a Free Quote',   zh: '免费获取报价', es: 'Solicitar Cotización', fr: 'Demander un Devis', de: 'Kostenloses Angebot' },
     // meta.* kept in en + zh only; other languages fall back to English via val()
     'meta.title':  { en: 'Custom Enamel Pins & Badges | EnamelCraft', zh: '定制珐琅徽章与胸针 | EnamelCraft' },
