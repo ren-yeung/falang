@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#1f7a4d">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>Contact & Free Quote | EnamelCraft</title>
-<meta name="description" content="Request a free enamel pin quote. Send your idea and get a design proof within 24 hours.">
+<title data-i18n="meta.title.contact">Contact & Free Quote | EnamelCraft</title>
+<meta name="description" data-i18n-attr="content" data-i18n="meta.desc.contact" content="Request a free enamel pin quote. Send your idea and get a design proof within 24 hours.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
@@ -34,9 +34,9 @@
 <section class="hero" style="background:linear-gradient(180deg,#f3faf6,#ffffff)">
   <div class="wrap hero-grid">
     <div>
-      <span class="eyebrow">Contact</span>
-      <h1>Get a <span class="hl">free quote</span></h1>
-      <p class="sub">Tell us about your project &mdash; attach a file if you have one. We'll reply with a design proof and quote within 24 hours. No obligation, ever.</p>
+      <span class="eyebrow" data-i18n="contact.eyebrow.hero">Contact</span>
+      <h1 data-i18n-html="contact.hero.title">Get a <span class="hl">free quote</span></h1>
+      <p class="sub" data-i18n="contact.hero.sub">Tell us about your project &mdash; attach a file if you have one. We'll reply with a design proof and quote within 24 hours. No obligation, ever.</p>
     </div>
     <div class="hero-art cpin-grid">
       <img src="images/badges/cpin-a.png" alt="City skyline enamel pin" class="cpin-item">
@@ -50,37 +50,37 @@
 <section class="section"><div class="wrap">
   <div class="contact-grid">
     <div>
-      <div class="form-ok" id="formOk">Thanks! We've received your request and will reply with a quote within 24 hours.</div>
+      <div class="form-ok" id="formOk" data-i18n="contact.ok">Thanks! We've received your request and will reply with a quote within 24 hours.</div>
       <form id="quoteForm" class="card" style="box-shadow:var(--shadow)" action="/api/contact" method="POST">
-        <div class="field"><label for="n">Name *</label><input id="n" name="name" required placeholder="Your name"></div>
-        <div class="field"><label for="e">Email *</label><input id="e" name="email" type="email" required placeholder="you@company.com"></div>
-        <div class="field"><label for="c">Company / Project</label><input id="c" name="company" placeholder="Optional"></div>
+        <div class="field"><label for="n" data-i18n="contact.lbl.name">Name *</label><input id="n" name="name" required placeholder="Your name" data-i18n-attr="placeholder" data-i18n="contact.ph.name"></div>
+        <div class="field"><label for="e" data-i18n="contact.lbl.email">Email *</label><input id="e" name="email" type="email" required placeholder="you@company.com" data-i18n-attr="placeholder" data-i18n="contact.ph.email"></div>
+        <div class="field"><label for="c" data-i18n="contact.lbl.company">Company / Project</label><input id="c" name="company" placeholder="Optional" data-i18n-attr="placeholder" data-i18n="contact.ph.optional"></div>
         <div class="grid grid-2">
-          <div class="field"><label for="p">Phone</label><input id="p" name="phone" placeholder="Optional"></div>
-          <div class="field"><label for="w">WhatsApp</label><input id="w" name="whatsapp" placeholder="Optional"></div>
+          <div class="field"><label for="p" data-i18n="contact.lbl.phone">Phone</label><input id="p" name="phone" placeholder="Optional" data-i18n-attr="placeholder" data-i18n="contact.ph.optional"></div>
+          <div class="field"><label for="w" data-i18n="contact.lbl.whatsapp">WhatsApp</label><input id="w" name="whatsapp" placeholder="Optional" data-i18n-attr="placeholder" data-i18n="contact.ph.optional"></div>
         </div>
-        <div class="field"><label for="co">Country</label><input id="co" name="country" placeholder="e.g. United States"></div>
+        <div class="field"><label for="co" data-i18n="contact.lbl.country">Country</label><input id="co" name="country" placeholder="e.g. United States" data-i18n-attr="placeholder" data-i18n="contact.ph.country"></div>
         <div class="grid grid-2">
-          <div class="field"><label for="q">Quantity</label><input id="q" name="quantity" placeholder="e.g. 200"></div>
-          <div class="field"><label for="s">Size</label><select id="s" name="size"><option>Not sure yet</option><option>13&ndash;16 mm</option><option>19&ndash;22 mm</option><option>25&ndash;32 mm</option><option>38 mm+</option></select></div>
+          <div class="field"><label for="q" data-i18n="contact.lbl.quantity">Quantity</label><input id="q" name="quantity" placeholder="e.g. 200" data-i18n-attr="placeholder" data-i18n="contact.ph.quantity"></div>
+          <div class="field"><label for="s" data-i18n="contact.lbl.size">Size</label><select id="s" name="size"><option data-i18n="contact.opt.notsure">Not sure yet</option><option>13&ndash;16 mm</option><option>19&ndash;22 mm</option><option>25&ndash;32 mm</option><option>38 mm+</option></select></div>
         </div>
-        <div class="field"><label for="m">Tell us about your pin *</label><textarea id="m" name="message" required placeholder="Style, colours, deadline, attachments..."></textarea></div>
+        <div class="field"><label for="m" data-i18n="contact.lbl.message">Tell us about your pin *</label><textarea id="m" name="message" required placeholder="Style, colours, deadline, attachments..." data-i18n-attr="placeholder" data-i18n="contact.ph.message"></textarea></div>
         <input type="hidden" name="_gotcha" value="" />
-        <button class="btn btn-primary" type="submit">Send my request <span class="arr">&rarr;</span></button>
-        <p class="note">Tip: you can also email <a href="mailto:ycr13120902436@gmail.com">ycr13120902436@gmail.com</a> with your artwork attached.</p>
+        <button class="btn btn-primary" type="submit" data-i18n="contact.submit">Send my request <span class="arr">&rarr;</span></button>
+        <p class="note" data-i18n-html="contact.note">Tip: you can also email <a href="mailto:ycr13120902436@gmail.com">ycr13120902436@gmail.com</a> with your artwork attached.</p>
       </form>
     </div>
     <div>
       <div class="info-card">
-        <h3>Reach us directly</h3>
-        <div class="row"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="10" width="40" height="28" rx="4" fill="none" stroke="currentColor" stroke-width="3"/><path d="M6 12 L24 26 L42 12" fill="none" stroke="currentColor" stroke-width="3"/></svg><div>ycr13120902436@gmail.com<br>We reply within 24 hours, Mon&ndash;Fri.</div></div>
-        <div class="row"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 6 C10 6 8 8 9 12 C11 20 20 29 28 31 C32 32 34 30 34 28 L30 24 C29 23 27 23 26 24 L22 28 C18 25 15 22 12 18 L16 14 C17 13 17 11 16 10 Z" fill="currentColor"/></svg><div>+86 13120902436<br>Studio hours 9:00&ndash;18:00 GMT</div></div>
-        <div class="row"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M24 4 C15 4 8 11 8 20 C8 32 24 44 24 44 C24 44 40 32 40 20 C40 11 33 4 24 4 Z" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="24" cy="19" r="7" fill="currentColor"/></svg><div>EnamelCraft Studio<br>Guangzhou, Guangdong, China</div></div>
-        <div class="row"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="18" fill="none" stroke="currentColor" stroke-width="3"/><path d="M6 24 H42 M24 6 C32 14 32 34 24 42 C16 34 16 14 24 6" fill="none" stroke="currentColor" stroke-width="3"/></svg><div>Worldwide shipping<br>Tracked &amp; insured</div></div>
+        <h3 data-i18n="contact.info.title">Reach us directly</h3>
+        <div class="row"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="10" width="40" height="28" rx="4" fill="none" stroke="currentColor" stroke-width="3"/><path d="M6 12 L24 26 L42 12" fill="none" stroke="currentColor" stroke-width="3"/></svg><div data-i18n-html="contact.info.email">ycr13120902436@gmail.com<br>We reply within 24 hours, Mon&ndash;Fri.</div></div>
+        <div class="row"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M12 6 C10 6 8 8 9 12 C11 20 20 29 28 31 C32 32 34 30 34 28 L30 24 C29 23 27 23 26 24 L22 28 C18 25 15 22 12 18 L16 14 C17 13 17 11 16 10 Z" fill="currentColor"/></svg><div data-i18n-html="contact.info.phone">+86 13120902436<br>Studio hours 9:00&ndash;18:00 GMT</div></div>
+        <div class="row"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M24 4 C15 4 8 11 8 20 C8 32 24 44 24 44 C24 44 40 32 40 20 C40 11 33 4 24 4 Z" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="24" cy="19" r="7" fill="currentColor"/></svg><div data-i18n-html="contact.info.addr">EnamelCraft Studio<br>Guangzhou, Guangdong, China</div></div>
+        <div class="row"><svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><circle cx="24" cy="24" r="18" fill="none" stroke="currentColor" stroke-width="3"/><path d="M6 24 H42 M24 6 C32 14 32 34 24 42 C16 34 16 14 24 6" fill="none" stroke="currentColor" stroke-width="3"/></svg><div data-i18n-html="contact.info.ship">Worldwide shipping<br>Tracked &amp; insured</div></div>
       </div>
       <div class="card mt-s" style="background:var(--green-50);border-color:#cfe3d6">
-        <h3 style="font-size:17px">What happens next?</h3>
-        <p style="color:var(--ink);font-size:14px;margin-top:6px">1) We review your brief &middot; 2) Send a free digital proof &middot; 3) You approve &middot; 4) We produce &amp; ship.</p>
+        <h3 style="font-size:17px" data-i18n="contact.next.title">What happens next?</h3>
+        <p style="color:var(--ink);font-size:14px;margin-top:6px" data-i18n="contact.next.p">1) We review your brief &middot; 2) Send a free digital proof &middot; 3) You approve &middot; 4) We produce &amp; ship.</p>
       </div>
     </div>
   </div>
@@ -92,7 +92,7 @@
     <div class="foot-grid">
       <div class="foot-brand">
         <a class="brand" href="index.html" style="color:#fff"><img src="images/logo.png" alt="EnamelCraft logo" class="logo"><span style="color:#fff">Enamel<b style="color:#7fe0a8">Craft</b></span></a>
-        <p>Custom enamel pins, badges &amp; brooches manufactured to your design. Low minimums, free artwork, worldwide delivery.</p>
+        <p data-i18n="foot.tagline">Custom enamel pins, badges &amp; brooches manufactured to your design. Low minimums, free artwork, worldwide delivery.</p>
         <div class="foot-social">
           <a href="#" aria-label="Facebook"><img src="images/icons/icon-facebook.png" alt="Facebook"></a>
           <a href="#" aria-label="TikTok"><img src="images/icons/icon-tiktok.png" alt="TikTok"></a>
@@ -101,29 +101,29 @@
           <a href="#" aria-label="YouTube"><img src="images/icons/icon-youtube.png" alt="YouTube"></a>
         </div>
       </div>
-      <div><h4>Products</h4>
-        <a href="custom-enamel-pins.html">Hard Enamel Pins</a>
-        <a href="custom-enamel-pins.html">Soft Enamel Pins</a>
-        <a href="custom-enamel-pins.html">Lapel Pins &amp; Brooches</a>
-        <a href="custom-enamel-pins.html">Custom Badges</a>
+      <div><h4 data-i18n="foot.col.products">Products</h4>
+        <a href="custom-enamel-pins.html" data-i18n="prod.hard">Hard Enamel Pins</a>
+        <a href="custom-enamel-pins.html" data-i18n="prod.soft">Soft Enamel Pins</a>
+        <a href="custom-enamel-pins.html" data-i18n="prod.lapel">Lapel Pins &amp; Brooches</a>
+        <a href="custom-enamel-pins.html" data-i18n="prod.badge">Custom Badges</a>
       </div>
-      <div><h4>Company</h4>
-        <a href="about.html">About Us</a>
-        <a href="gallery.html">Our Work</a>
-        <a href="how-it-works.html">How It Works</a>
-        <a href="pricing.html">Pricing</a>
+      <div><h4 data-i18n="foot.col.company">Company</h4>
+        <a href="about.html" data-i18n="foot.about">About Us</a>
+        <a href="gallery.html" data-i18n="foot.work">Our Work</a>
+        <a href="how-it-works.html" data-i18n="nav.how">How It Works</a>
+        <a href="pricing.html" data-i18n="nav.pricing">Pricing</a>
       </div>
-      <div><h4>Support</h4>
-        <a href="faq.html">FAQ</a>
-        <a href="contact.html">Contact</a>
+      <div><h4 data-i18n="foot.col.support">Support</h4>
+        <a href="faq.html" data-i18n="nav.faq">FAQ</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
         <a href="mailto:ycr13120902436@gmail.com">ycr13120902436@gmail.com</a>
         <a href="tel:+8613120902436">+86 131 2090 2436</a>
         <a href="https://wa.me/8613120902436" class="foot-wa">WhatsApp: +86 131 2090 2436</a>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>&copy; <span id="yr"></span> EnamelCraft. All rights reserved.</span>
-      <span>Crafted with care &middot; Placeholder brand &mdash; rename freely</span>
+      <span>&copy; <span id="yr"></span> EnamelCraft. <span data-i18n="foot.rights">All rights reserved.</span></span>
+      <span data-i18n="foot.made">Crafted with care &middot; Placeholder brand &mdash; rename freely</span>
     </div>
   </div>
 </footer>
