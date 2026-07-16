@@ -39,15 +39,15 @@ img{max-width:100%;display:block}
 
 /* header */
 header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);
-  backdrop-filter:saturate(150%) blur(10px);border-bottom:1px solid transparent;transition:.25s}
+  backdrop-filter:saturate(150%) blur(10px);border-bottom:1px solid transparent;transition:.25s;overflow:hidden}
 header.site.scrolled{box-shadow:var(--shadow-sm);border-color:var(--border)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
 .brand{display:flex;align-items:center;gap:11px;font-family:'Poppins',sans-serif;font-weight:700;font-size:20px;color:var(--ink);flex:none;margin-right:14px}
 .brand .logo{width:40px;height:40px;flex:none;object-fit:contain;border-radius:6px}
 .brand b{color:var(--green)}
-.nav-links{display:flex;align-items:center;gap:6px}
+.nav-links{display:flex;align-items:center;gap:4px;flex-wrap:nowrap;overflow:hidden}
 .nav-links a{font-family:'Poppins',sans-serif;font-weight:500;font-size:13px;color:var(--ink);
-  padding:7px 9px;border-radius:9px;transition:.18s;white-space:nowrap}
+  padding:7px 8px;border-radius:9px;transition:.18s;white-space:nowrap!important;flex-shrink:0}
 .nav-links a:hover{color:var(--green);background:var(--green-50)}
 .nav-links a.active{color:var(--green)}
 .nav-actions{display:flex;align-items:center;gap:10px;flex:none;margin-left:12px}
@@ -57,12 +57,12 @@ header.site.scrolled{box-shadow:var(--shadow-sm);border-color:var(--border)}
 .mobile-menu{display:none;flex-direction:column;gap:4px;padding:10px 22px 20px;background:#fff;border-top:1px solid var(--border)}
 .mobile-menu a{padding:12px 8px;font-family:'Poppins',sans-serif;font-weight:500;border-radius:9px}
 .mobile-menu a:hover{background:var(--green-50);color:var(--green)}
-.lang-dropdown{position:relative;display:inline-block;flex:none}
+.lang-dropdown{position:relative;display:inline-block;flex:none;overflow:visible;z-index:70}
 .lang-dropdown .lang-toggle{display:inline-flex;align-items:center;gap:6px;height:34px;padding:0 10px;border:1.5px solid var(--green);border-radius:8px;background:#fff;color:var(--green);font-family:'Poppins',sans-serif;font-weight:600;font-size:13px;cursor:pointer;transition:background .15s}
 .lang-dropdown .lang-toggle:hover{background:var(--green-50)}
 .lang-dropdown .lang-toggle .chev{width:10px;height:10px;transition:transform .2s}
 .lang-dropdown.open .lang-toggle .chev{transform:rotate(180deg)}
-.lang-dropdown .lang-menu{position:absolute;top:calc(100% + 8px);right:0;min-width:160px;margin:0;padding:6px;list-style:none;background:#fff;border:1px solid #e5e7eb;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.14);z-index:60;display:none}
+.lang-dropdown .lang-menu{position:absolute;top:calc(100% + 6px);right:0;min-width:150px;margin:0;padding:5px;list-style:none;background:#fff;border:1px solid #e5e7eb;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,.14);z-index:9999;display:none;overflow:hidden}
 .lang-dropdown.open .lang-menu{display:block}
 .lang-dropdown .lang-menu li{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:9px 10px;border-radius:7px;font-family:'Poppins',sans-serif;font-size:14px;color:#1f2937;cursor:pointer}
 .lang-dropdown .lang-menu li:hover{background:var(--green-50)}
