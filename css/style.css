@@ -39,7 +39,7 @@ img{max-width:100%;display:block}
 
 /* header */
 header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);
-  backdrop-filter:saturate(150%) blur(10px);border-bottom:1px solid transparent;transition:.25s;overflow:hidden}
+  backdrop-filter:saturate(150%) blur(10px);border-bottom:1px solid transparent;transition:.25s}
 header.site.scrolled{box-shadow:var(--shadow-sm);border-color:var(--border)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
 .brand{display:flex;align-items:center;gap:11px;font-family:'Poppins',sans-serif;font-weight:700;font-size:20px;color:var(--ink);flex:none;margin-right:14px}
