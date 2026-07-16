@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded',function(){
     var cta=document.createElement('a');
     cta.className='mobile-cta';
     cta.href='contact.html';
-    cta.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> Get a Free Quote';
+    cta.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> <span data-i18n="cta.quote">Get a Free Quote</span>';
     document.body.appendChild(cta);
   }
   // year

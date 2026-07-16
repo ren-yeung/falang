@@ -56,6 +56,10 @@ header.site.scrolled{box-shadow:var(--shadow-sm);border-color:var(--border)}
 .mobile-menu{display:none;flex-direction:column;gap:4px;padding:10px 22px 20px;background:#fff;border-top:1px solid var(--border)}
 .mobile-menu a{padding:12px 8px;font-family:'Poppins',sans-serif;font-weight:500;border-radius:9px}
 .mobile-menu a:hover{background:var(--green-50);color:var(--green)}
+.lang-switch{display:inline-flex;align-items:center;border:1.5px solid var(--green);border-radius:999px;height:34px;overflow:hidden;flex:none}
+.lang-switch .lang-opt{font-family:'Poppins',sans-serif;font-weight:600;font-size:13px;line-height:34px;padding:0 12px;border:0;background:transparent;color:var(--green);cursor:pointer;transition:background .15s,color .15s}
+.lang-switch .lang-opt:hover{background:var(--green-50)}
+.lang-switch .lang-opt.active{background:var(--green);color:#fff}
 .mobile-menu.open{display:flex}
 
 /* hero */
