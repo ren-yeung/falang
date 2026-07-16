@@ -42,15 +42,16 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.82);
   backdrop-filter:saturate(150%) blur(10px);border-bottom:1px solid transparent;transition:.25s}
 header.site.scrolled{box-shadow:var(--shadow-sm);border-color:var(--border)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
-.brand{display:flex;align-items:center;gap:11px;font-family:'Poppins',sans-serif;font-weight:700;font-size:20px;color:var(--ink);flex:none;margin-right:20px}
+.brand{display:flex;align-items:center;gap:11px;font-family:'Poppins',sans-serif;font-weight:700;font-size:20px;color:var(--ink);flex:none;margin-right:14px}
 .brand .logo{width:40px;height:40px;flex:none;object-fit:contain;border-radius:6px}
 .brand b{color:var(--green)}
-.nav-links{display:flex;align-items:center;gap:10px}
-.nav-links a{font-family:'Poppins',sans-serif;font-weight:500;font-size:14px;color:var(--ink);
-  padding:8px 12px;border-radius:9px;transition:.18s;white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:6px}
+.nav-links a{font-family:'Poppins',sans-serif;font-weight:500;font-size:13px;color:var(--ink);
+  padding:7px 9px;border-radius:9px;transition:.18s;white-space:nowrap}
 .nav-links a:hover{color:var(--green);background:var(--green-50)}
 .nav-links a.active{color:var(--green)}
-.nav-actions{display:flex;align-items:center;gap:12px;flex:none;margin-left:16px}
+.nav-actions{display:flex;align-items:center;gap:10px;flex:none;margin-left:12px}
+.nav-actions .btn{font-size:13px;padding:9px 18px}
 .hamburger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
 .hamburger span{width:24px;height:2px;background:var(--ink);border-radius:2px;transition:.25s}
 .mobile-menu{display:none;flex-direction:column;gap:4px;padding:10px 22px 20px;background:#fff;border-top:1px solid var(--border)}
