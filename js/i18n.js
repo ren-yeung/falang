@@ -17,8 +17,8 @@
 
   var DICT = {
     'nav.home':    { en: 'Home',               zh: '首页',       es: 'Inicio',            fr: 'Accueil',         de: 'Start' },
-    'nav.custom':  { en: 'Custom Pins',        zh: '定制徽章',    es: 'Pines a Medida',     fr: 'Pins Sur Mesure', de: 'Indiv. Pins' },
-    'nav.how':     { en: 'How It Works',       zh: '制作流程',    es: 'Cómo Funciona',      fr: 'Notre Processus',de: 'Ablauf' },
+    'nav.custom':  { en: 'Custom Pins',        zh: '定制徽章',    es: 'Pines',             fr: 'Pins Sur-Mesure',  de: 'Indiv. Pins' },
+    'nav.how':     { en: 'How It Works',       zh: '制作流程',    es: 'Proceso',           fr: 'Processus',        de: 'Ablauf' },
     'nav.pricing': { en: 'Pricing',            zh: '价格',       es: 'Precios',           fr: 'Tarifs',          de: 'Preise' },
     'nav.gallery': { en: 'Gallery',            zh: '案例展示',    es: 'Galería',           fr: 'Galerie',         de: 'Galerie' },
     'nav.about':   { en: 'About',              zh: '关于我们',    es: 'Nosotros',          fr: 'À propos',        de: 'Über uns' },
