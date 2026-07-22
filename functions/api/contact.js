@@ -16,7 +16,7 @@ export async function onRequestPost(context) {
 
     const ip = request.headers.get("cf-connecting-ip") || "";
     const referer =
-      request.headers.get("referer") || "https://seektrace.ccwu.cc/contact.html";
+      request.headers.get("referer") || "https://seektrace.ccwu.cc/contact";
 
     // Parse UTM params from the referring page URL for campaign tracking.
     let sourceCampaign = "";

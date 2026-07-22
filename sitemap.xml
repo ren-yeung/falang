@@ -3,41 +3,49 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://seektrace.ccwu.cc/</loc>
+    <lastmod>2026-07-22</lastmod>
     <priority>1.0</priority>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://seektrace.ccwu.cc/custom-enamel-pins</loc>
+    <lastmod>2026-07-22</lastmod>
     <priority>0.9</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://seektrace.ccwu.cc/how-it-works</loc>
+    <lastmod>2026-07-22</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://seektrace.ccwu.cc/pricing</loc>
+    <lastmod>2026-07-22</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://seektrace.ccwu.cc/gallery</loc>
+    <lastmod>2026-07-22</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://seektrace.ccwu.cc/about</loc>
+    <lastmod>2026-07-22</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://seektrace.ccwu.cc/faq</loc>
+    <lastmod>2026-07-22</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://seektrace.ccwu.cc/contact</loc>
+    <lastmod>2026-07-22</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
