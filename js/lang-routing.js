@@ -1,6 +1,9 @@
 (function () {
   var locales = ['zh', 'es', 'fr', 'de'];
 
+  var pathLocale = window.location.pathname.match(/^\/(zh|es|fr|de)(?:\/|$)/);
+  try { localStorage.setItem('ec_lang', pathLocale ? pathLocale[1] : 'en'); } catch (_) {}
+
   function pagePath() {
     var path = window.location.pathname.replace(/\/$/, '');
     var match = path.match(/^\/(zh|es|fr|de)(\/.*)?$/);
