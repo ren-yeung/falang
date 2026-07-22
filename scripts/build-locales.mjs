@@ -43,7 +43,7 @@ for (const [locale, config] of Object.entries(locales)) {
     html = html.replace(/href="\/(about|contact|custom-enamel-pins|faq|gallery|how-it-works|pricing)"/g, (_, p) => `href="/${locale}/${p}"`);
     html = html.replace(/href="\/"/g, `href="/${locale}/"`);
     html = html.replace('<script src="js/i18n.js"></script>', `<script>localStorage.setItem('ec_lang','${locale}');</script>\n  <script src="/js/i18n.js"></script>\n  <script src="/js/lang-routing.js"></script>`);
-    html = html.replace('</body>', `<script>document.addEventListener('DOMContentLoaded',()=>document.querySelectorAll('#langDropdown li[data-lang]').forEach(li=>{const a=document.createElement('a');a.href='/' + li.dataset.lang + window.location.pathname.replace(/^\\/(?:zh|es|fr|de)/,'');a.className='lang-link';a.innerHTML=li.innerHTML;li.replaceWith(a);}));</script>\n</body>`);
+    html = html.replace('</body>', `<script>document.addEventListener('DOMContentLoaded',()=>document.querySelectorAll('#langDropdown li[data-lang]').forEach(li=>{const a=document.createElement('a');a.href='/' + li.dataset.lang + window.location.pathname.replace(/^\\/(?:en|zh|es|fr|de)/,'');a.className='lang-link';a.innerHTML=li.innerHTML;li.replaceWith(a);}));</script>\n</body>`);
     fs.writeFileSync(path.join(targetDir, fileName(page)), html);
   }
 }
