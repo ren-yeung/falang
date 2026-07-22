@@ -4,6 +4,8 @@ import path from 'node:path';
 const root = process.cwd();
 const pages = ['index', 'custom-enamel-pins', 'how-it-works', 'pricing', 'gallery', 'about', 'faq', 'contact'];
 const locales = {
+  en: { html: 'en', label: 'English', titles: {
+    index: 'Custom Enamel Pins & Badges | EnamelCraft', 'custom-enamel-pins': 'Custom Hard & Soft Enamel Pins | EnamelCraft', 'how-it-works': 'How Custom Enamel Pins Are Made | EnamelCraft', pricing: 'Custom Enamel Pin Pricing & MOQ | EnamelCraft', gallery: 'Custom Enamel Pin Portfolio | EnamelCraft', about: 'Enamel Pin Manufacturer & Production Partner | EnamelCraft', faq: 'Custom Enamel Pin FAQ | EnamelCraft', contact: 'Free Custom Enamel Pin Quote | EnamelCraft' } },
   zh: { html: 'zh-CN', label: '中文', titles: {
     index: '定制珐琅徽章制造商 | EnamelCraft', 'custom-enamel-pins': '定制硬珐琅与软珐琅徽章 | EnamelCraft', 'how-it-works': '定制珐琅徽章制作流程 | EnamelCraft', pricing: '定制珐琅徽章价格与起订量 | EnamelCraft', gallery: '定制珐琅徽章案例 | EnamelCraft', about: '珐琅徽章制造商与生产伙伴 | EnamelCraft', faq: '定制珐琅徽章常见问题 | EnamelCraft', contact: '定制珐琅徽章免费报价 | EnamelCraft' } },
   es: { html: 'es', label: 'Español', titles: {
