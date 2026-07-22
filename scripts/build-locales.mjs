@@ -36,6 +36,8 @@ for (const [locale, config] of Object.entries(locales)) {
     ].join('\n  ');
     html = html.replace('</head>', `  ${alternates}\n</head>`);
     html = html.replace(/https:\/\/seektrace\.ccwu\.cc\/(about|contact|custom-enamel-pins|faq|gallery|how-it-works|pricing)(\.html)?/g, (_, p) => `https://seektrace.ccwu.cc/${locale}/${p}`);
+    html = html.replace(/href="(css|js|images)\//g, (_, folder) => `href="/${folder}/`);
+    html = html.replace(/src="(css|js|images)\//g, (_, folder) => `src="/${folder}/`);
     html = html.replace(/href="\/(about|contact|custom-enamel-pins|faq|gallery|how-it-works|pricing)"/g, (_, p) => `href="/${locale}/${p}"`);
     html = html.replace(/href="\/"/g, `href="/${locale}/"`);
     html = html.replace('<script src="js/i18n.js"></script>', `<script>localStorage.setItem('ec_lang','${locale}');</script>\n  <script src="/js/i18n.js"></script>`);
